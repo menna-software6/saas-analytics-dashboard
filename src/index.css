@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #0B0D10;
+  --color-surface-1: #11151B;
+  --color-surface-2: #151A22;
+  --color-surface-3: #1A212D;
+  --color-border: #252B35;
+  --color-border-light: #323A48;
+  --color-text-main: #F5F5F7;
+  --color-text-muted: #8B93A1;
+  --color-accent-violet: #7C5CFF;
+  --color-accent-mint: #20D9A6;
+  --color-accent-purple: #A78BFA;
+  --color-accent-cyan: #38BDF8;
+}
+
+@layer base {
+  * {
+    border-color: #252B35;
+  }
+  body {
+    background-color: #0B0D10;
+    color: #F5F5F7;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D10;
+}
+::-webkit-scrollbar-thumb {
+  background: #252B35;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #323A48;
+}
+
+/* Glassmorphism and ambient lighting utilities */
+.glass-panel {
+  background: rgba(17, 21, 27, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(37, 43, 53, 0.8);
+}
+
+.glass-panel-subtle {
+  background: rgba(21, 26, 34, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(37, 43, 53, 0.6);
+}
+
+.glow-violet {
+  box-shadow: 0 0 30px -10px rgba(124, 92, 255, 0.25);
+}
+
+.glow-mint {
+  box-shadow: 0 0 30px -10px rgba(32, 217, 166, 0.25);
+}
+
+/* Noise overlay utility */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+

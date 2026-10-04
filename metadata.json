@@ -1,0 +1,6 @@
+{
+  "name": "NOVA - SaaS Analytics Dashboard",
+  "description": "A premium, production-grade SaaS analytics and revenue intelligence dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
